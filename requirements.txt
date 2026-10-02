@@ -1,0 +1,4 @@
+PyNaCl>=1.5,<2
+shamir-mnemonic>=0.3,<1
+qrcode[pil]>=7.4,<9
+streamlit>=1.60,<2

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "white-stone"
+version = "0.2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "PyNaCl>=1.5,<2",
+    "shamir-mnemonic>=0.3,<1",
+    "qrcode[pil]>=7.4,<9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+gui = ["streamlit>=1.60,<2"]
+
+[project.scripts]
+white-stone = "white_stone.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["white_stone*"]
